@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- <link rel="stylesheet" href="/css/share/nav.css"> -->
+    <link rel="stylesheet" href="nav.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+</head>
+<body>
+    <div class="topnav">
+        <div class="topLogoImg"><img src="logo.png" alt=""></div>
+        <a class="active" href="/html/home.html">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>  
+        <a class="active"href="/html/cart.html" >Product</a>
+        <a class="active"href="/html/contact.html">Contact</a>
+        <a class="active"href="/html/about.html">About</a>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function() {
+    $("#footer-placeholder").dropdown();
+});
+  $(function(){
+    // $("#nav-placeholder").load("/html/share/nav.html");\
+    $("#nav-placeholder").load("/html//testing.html");
+  });
+
+  $(function(){
+    $("#footer-placeholder").load("/html/share/footer.html");
+  });
+</script>
+
