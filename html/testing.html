@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="/css/share/testing.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+    <div class="grid-container">
+        <div class="item1">
+          <div class="box_for_animation">
+            <div class="image-container">
+              <img src="/images/background_img.jpg" alt="Old Image">
+            </div>
+            <button class="change-image-button">Change Image</button>
+          </div>
+        </div>
+        <div class="item2"><img src="/images/logo.png" alt=""></div>
+        <div class="item3"><img src="/images/logo.png" alt=""></div>  
+        <div class="item4"><img src="/images/background_img.jpg" alt=""></div>
+        <div class="item5">
+            <div class="small-container">
+                <div class="sitem1"><img src="/images/logo.png" alt=""></div>
+                <div class="sitem2"><img src="/images/logo.png" alt=""></div>
+                <div class="sitem3"><img src="/images/logo.png" alt=""></div>
+                <div class="sitem4"><img src="/images/logo.png" alt=""></div>
+                <div class="sitem5"><img src="/images/logo.png" alt=""></div>
+                <div class="sitem6"><img src="/images/logo.png" alt=""></div>
+            </div>
+        </div>
+        <div class="item6">
+          <div id="footer-placeholder"></div>
+        </div>
+      
+      </div> 
+</body>
+</html>
+
+<script>
+  $(function(){
+    // $("#nav-placeholder").load("/html/share/nav.html");\
+    $("#nav-placeholder").load("/html/share/nav.html");
+  });
+
+  $(function(){
+    $("#footer-placeholder").load("/html/share/footer.html");
+  });
+</script>
+

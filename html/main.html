@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <!--Navigation bar-->
+<div id="nav-placeholder"></div>
+<div class="grid-container">
+  <div class="item1">
+     <!-- Container for the image -->
+     <div class="image-container">
+      <img id="mainImage" src="/images/ready2.png" alt="Old Image">
+  </div>
+  <!-- Button to trigger image change -->
+  <button onclick="imgBTn()" id="changeImageButton" class="change-image-button">Craft</button>
+      <!-- <img width="auto" height="auto" src="images/background_img.jpg" alt=""> -->
+  </div>
+  <div class="item2"><img src="/images/logo.png" alt=""></div>
+  <div class="item3"><img src="/images/logo.png" alt=""></div>  
+  <div class="item4"><img src="/images/background_img.jpg" alt=""></div>
+  <div class="item5">
+      <div class="small-container">
+          <div class="sitem1"><img src="/images/logo.png" alt=""></div>
+          <div class="sitem2"><img src="/images/logo.png" alt=""></div>
+          <div class="sitem3"><img src="/images/logo.png" alt=""></div>
+          <div class="sitem4"><img src="/images/logo.png" alt=""></div>
+          <div class="sitem5"><img src="/images/logo.png" alt=""></div>
+          <div class="sitem6"><img src="/images/logo.png" alt=""></div>
+      </div>
+  </div>
+  <div class="item6">
+    <div id="footer-placeholder"></div>
+  </div>
+
+</div> 
+</body>
+</html>
+
+<script>
+  $(function(){
+    // $("#nav-placeholder").load("/html/share/nav.html");\
+    $("#nav-placeholder").load("/html/share/nav.html");
+  });
+
+  $(function(){
+    $("#footer-placeholder").load("/html/share/footer.html");
+  });
+
+  // JavaScript to change the image on button hover
+document.getElementById("changeImageButton").addEventListener("mouseenter", function() {
+    document.getElementById("mainImage").src = "/images/hammer2.png"; // Change image source
+});
+
+document.getElementById("changeImageButton").addEventListener("mouseleave", function() {
+    document.getElementById("mainImage").src = "/images/ready2.png"; // Change image source back to original
+});
+
+function imgBTn() {
+  // Get the image element
+  var img = document.getElementById('mainImage');
+  // Change the src attribute to the new image
+  img.src = '/images/drawing_master2.png';
+  setTimeout(() => {
+    window.location.href = 'about.html';
+  }, 1000);
+}
+</script>

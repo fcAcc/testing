@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Change on Button Hover</title>
+<style>
+/* Styling for the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-image: url('/images/background_img.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; /* Ensure the background image covers the container */
+    height: 500px;
+    position: relative; /* Necessary for positioning the button */
+}
+
+/* Styling for the button */
+.change-image-button {
+    position: absolute; /* Position the button relative to its closest positioned ancestor */
+    bottom: 20px; /* Adjust button position from the bottom */
+    left: 50%; /* Position button horizontally at the center */
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for the image container */
+.image-container {
+    position: absolute; /* Position the image container relative to its closest positioned ancestor */
+    top: 50%; /* Position image container vertically at the center */
+    left: 50%; /* Position image container horizontally at the center */
+    transform: translate(-50%, -50%); /* Center the image container */
+    overflow: hidden; /* Ensure image does not overflow its container */
+}
+
+/* Default image */
+.image-container img {
+    max-width: 50%;
+}
+
+/* Image when button is hovered */
+.image-container img:hover {
+    background-color: #555555;
+    color: white;
+    content: url('/images/chacter1.png'); /* Change the URL to the new image */
+}
+</style>
+</head>
+<body>
+
+<!-- Grid container -->
+<div class="grid-container">
+    <div class="item1">
+        <!-- Container for the image -->
+        <div class="image-container">
+            <img src="/images/chacter2.png" alt="Old Image">
+        </div>
+        <!-- Button to trigger image change -->
+        <button class="change-image-button">Change Image</button>
+    </div>
+</div>
+
+</body>
+</html>
